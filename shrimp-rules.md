@@ -80,10 +80,6 @@ subscription-manager/
  *          → SubscriptionRepository.save()
  *          → DateCalculator.calculateNextBillingDate()
  * 
- * 수학적 구조: 다음 결제일 = 현재 결제일 + 결제 주기
- * - MONTHLY: +1개월
- * - QUARTERLY: +3개월  
- * - YEARLY: +1년
  */
 public SubscriptionResponseDto createSubscription(SubscriptionRequestDto request) {
     // ...
