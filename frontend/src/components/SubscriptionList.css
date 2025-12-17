@@ -1,0 +1,104 @@
+.subscription-list {
+  width: 100%;
+  padding: 2rem;
+}
+
+.subscription-list-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+}
+
+.subscription-list-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.subscription-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.subscription-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.subscription-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.subscription-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.subscription-card-billing-cycle {
+  background: #f5f5f5;
+  color: #666;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.subscription-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.subscription-card-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.subscription-card-dates {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.subscription-card-date-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.subscription-card-date-label {
+  color: #666;
+  font-weight: 500;
+}
+
+.subscription-card-date-value {
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.subscription-list-loading,
+.subscription-list-error,
+.subscription-list-empty {
+  padding: 3rem;
+  text-align: center;
+  color: #666;
+  font-size: 1rem;
+}
+
+.subscription-list-error {
+  color: #dc2626;
+}
