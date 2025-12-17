@@ -1,0 +1,84 @@
+.monthly-expense-chart {
+  width: 100%;
+  padding: 2rem;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.monthly-expense-chart-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+}
+
+.monthly-expense-chart-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.monthly-expense-chart-summary-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2563eb;
+  margin-bottom: 0.5rem;
+}
+
+.monthly-expense-chart-summary-label {
+  font-size: 1rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.monthly-expense-chart-container {
+  width: 100%;
+  height: 300px;
+}
+
+.monthly-expense-chart-tooltip {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.monthly-expense-chart-tooltip-label {
+  font-size: 0.875rem;
+  color: #666;
+  margin: 0 0 0.25rem 0;
+  font-weight: 500;
+}
+
+.monthly-expense-chart-tooltip-value {
+  font-size: 1.125rem;
+  color: #1a1a1a;
+  margin: 0;
+  font-weight: 700;
+}
+
+.monthly-expense-chart-loading,
+.monthly-expense-chart-error,
+.monthly-expense-chart-empty {
+  padding: 3rem;
+  text-align: center;
+  color: #666;
+  font-size: 1rem;
+}
+
+.monthly-expense-chart-error {
+  color: #dc2626;
+}
+
+.monthly-expense-chart-empty {
+  color: #666;
+}
+
