@@ -25,7 +25,7 @@ import type {
  * - 공통 헤더 설정
  */
 const apiClient = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080',
+  baseURL: import.meta.env.VITE_API_BASE_URL || 'http://localhost:8090',
   headers: {
     'Content-Type': 'application/json',
   },
