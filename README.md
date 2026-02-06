@@ -1,13 +1,11 @@
 # 💸 나의 구독 서비스 매니저 (Subscription Manager)
 
-넷플릭스, 유튜브, 헬스장 등 정기 결제 서비스를 효율적으로 관리하는 풀스택 웹 애플리케이션입니다.
+넷플릭스, 유튜브, 헬스장 등 정기 결제 서비스를 효율적으로 관리
 
 ## 📋 프로젝트 개요
 
 **프로젝트명:** 나의 구독 서비스 매니저 (Subscription Manager)  
 **목적:** 정기 결제 서비스를 효율적으로 관리하고 월별 지출을 추적  
-**개발 기간:** 7일  
-**버전:** 1.0.0
 
 ## 🎯 핵심 기능
 
@@ -108,76 +106,7 @@ subscription-manager/
 └── PROJECT_PLAN.md                            # 프로젝트 계획서
 ```
 
-## 🚀 실행 방법
 
-### 사전 요구사항
-- Java 17 이상
-- Node.js 18 이상
-- Maven 3.6 이상 (또는 프로젝트에 포함된 Maven Wrapper 사용)
-
-### 백엔드 실행
-
-1. 프로젝트 루트 디렉토리로 이동:
-```bash
-cd subscription-manager
-```
-
-2. Maven을 사용하여 애플리케이션 실행:
-```bash
-# Windows
-mvnw.cmd spring-boot:run
-
-# Linux/Mac
-./mvnw spring-boot:run
-```
-
-또는 Maven이 설치되어 있다면:
-```bash
-mvn spring-boot:run
-```
-
-3. 백엔드 서버가 실행되면:
-- API 서버: `http://localhost:8090`
-- H2 콘솔: `http://localhost:8090/h2-console`
-  - JDBC URL: `jdbc:h2:mem:testdb`
-  - Username: `sa`
-  - Password: (비워두기)
-
-### 프론트엔드 실행
-
-1. 프론트엔드 디렉토리로 이동:
-```bash
-cd frontend
-```
-
-2. 의존성 설치:
-```bash
-npm install
-```
-
-3. 개발 서버 실행:
-```bash
-npm run dev
-```
-
-4. 프론트엔드가 실행되면:
-- 개발 서버: `http://localhost:5173` (Vite 기본 포트)
-
-### 프로덕션 빌드
-
-#### 백엔드 빌드
-```bash
-mvn clean package
-java -jar target/subscription-manager-1.0.0.jar
-```
-
-#### 프론트엔드 빌드
-```bash
-cd frontend
-npm run build
-```
-
-빌드된 파일은 `frontend/dist` 디렉토리에 생성됩니다.
 
 ## 📡 API 엔드포인트
 
@@ -200,37 +129,6 @@ npm run build
 
 자세한 API 문서는 [API_DOCS.md](./API_DOCS.md)를 참고하세요.
 
-## 🧪 테스트
-
-### 백엔드 API 테스트
-
-#### 1. 구독 서비스 등록
-```bash
-curl -X POST http://localhost:8090/api/subscriptions \
-  -H "Content-Type: application/json" \
-  -d '{
-    "userId": 1,
-    "serviceName": "넷플릭스",
-    "price": 9500,
-    "billingCycle": "MONTHLY",
-    "billingDate": "2024-12-15"
-  }'
-```
-
-#### 2. 구독 목록 조회
-```bash
-curl http://localhost:8090/api/subscriptions?userId=1
-```
-
-#### 3. 결제 임박 목록 조회
-```bash
-curl http://localhost:8090/api/subscriptions/upcoming?userId=1
-```
-
-#### 4. 월별 지출액 조회
-```bash
-curl http://localhost:8090/api/subscriptions/monthly-expense?userId=1
-```
 
 ### 배치 작업 테스트
 
@@ -317,45 +215,4 @@ CREATE TABLE subscriptions (
 - 구독 취소 알림
 - 다국어 지원
 - 다크 모드
-
-## 📝 개발 가이드라인
-
-프로젝트 개발 시 다음 문서를 참고하세요:
-
-- [WORKFLOW.md](./WORKFLOW.md) - 작업 순서 가이드
-- [PROJECT_PLAN.md](./PROJECT_PLAN.md) - 프로젝트 계획서
-- [.cursorrules.mdc](./.cursorrules.mdc) - 프론트엔드 개발 규칙
-
-## 🐛 문제 해결
-
-### 백엔드 포트 충돌
-`application.properties`에서 포트를 변경:
-```properties
-server.port=8090
-```
-
-### 프론트엔드 API 연결 오류
-`frontend/src/services/api.ts`에서 API 베이스 URL 확인:
-```typescript
-const API_BASE_URL = 'http://localhost:8090';
-```
-
-### H2 데이터베이스 접속
-H2 콘솔 접속 정보:
-- URL: `jdbc:h2:mem:testdb`
-- Username: `sa`
-- Password: (비워두기)
-
-## 📄 라이선스
-
-이 프로젝트는 학습 및 포트폴리오 목적으로 제작되었습니다.
-
-## 👥 기여자
-
-- 개발자
-
----
-
-**작성일:** 2024년 12월  
-**버전:** 1.0.0
 
